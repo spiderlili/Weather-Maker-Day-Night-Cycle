@@ -19,7 +19,7 @@
              
             #include "UnityCG.cginc"
  
-            #define COLORS 32.0
+            #define COLORS 32.0 //usually there are 32 colors on LUT but it should work for other numbers too
  
             struct appdata
             {
@@ -43,7 +43,7 @@
              
             sampler2D _MainTex;
             sampler2D _LUT;
-            float4 _LUT_TexelSize;
+            float4 _LUT_TexelSize; //create field with dimensions of the texture and the size of the texels
             float _Contribution;
  
             fixed4 frag (v2f i) : SV_Target
